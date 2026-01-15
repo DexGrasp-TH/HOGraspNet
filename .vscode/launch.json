@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Launch main.py",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "args": ["--p_num", "28", "--intent", "use", "--object_name", "mouse", "--mode", "simple_hands"]
+
+
+    }
+  ]
+}

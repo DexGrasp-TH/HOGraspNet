@@ -2,7 +2,7 @@ opencv-python
 tqdm
 wget
 requests
-chumpy @ git+https://github.com/mattloper/chumpy
+# chumpy @ git+https://github.com/mattloper/chumpy
 torch==2.0.0
 torchvision==0.15.1
 torchaudio==2.0.1

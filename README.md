@@ -22,6 +22,8 @@ HOGraspNet provides the following data and models:
     git clone https://github.com/UVR-WJCHO/HOGraspNet.git
     cd HOGraspNet
     pip install -r requirements.txt
+
+    pip install 'numpy<1.24'
     ```
 - (TBD, for visualization) Install pytorch3d following [here](https://github.com/facebookresearch/pytorch3d) (our code uses version 0.7.3)
 
@@ -146,6 +148,8 @@ Please check it if you need data on a specific type of subject.
     - If you set your MANO folder in another path, modify the `mano_path` parameter in `scripts/config.py`
 - We utilized a differentiable MANO layer for PyTorch from https://github.com/hassony2/manopth. `thirdparty/manopth`
 
+    - `pip install -e . `
+
 
 <!-- ```bash
 conda create -n HOG_vis python=3.10
@@ -215,3 +219,23 @@ If using this dataset, please cite the following paper:
 본 연구에 활용된 데이터는 AI 허브([aihub.or.kr](http://aihub.or.kr/))에서 다운로드 받으실 수 있습니다.
 This research (paper) used datasets from 'The Open AI Dataset Project (AI-Hub, S. Korea)'.
 All data information can be accessed through 'AI-Hub ([www.aihub.or.kr](http://www.aihub.or.kr/))'.
+
+## Mingrui
+
+Identify the MAS camera frame in the (approximated) tabletop frame:
+```bash
+python scripts/identify_tabletop_frame.py
+```
+
+Extract and re-format grasps:
+```bash
+python scripts/extract_grasps.py
+```
+
+Transform grasps from the MAS camera frame to the tabletop frame:
+```bash
+python scripts/transform_to_tabletop.py
+```
+
+
+
